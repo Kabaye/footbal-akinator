@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-@Data(staticConstructor = "of")
+@Data
 @Accessors(chain = true)
 public class Rule {
     private final List<RuleEntity> ifRules;
