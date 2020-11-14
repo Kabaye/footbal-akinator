@@ -1,0 +1,310 @@
+[
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "UEFA Champions League"
+      }
+    ],
+    "then": {
+      "attribute": "Status",
+      "value": "Top"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "English Premier League"
+      },
+      {
+        "attribute": "Number of cups",
+        "value": "2+"
+      }
+    ],
+    "then": {
+      "attribute": "Status",
+      "value": "Top"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "LaLiga Santander"
+      },
+      {
+        "attribute": "Number of cups",
+        "value": "10+"
+      }
+    ],
+    "then": {
+      "attribute": "Status",
+      "value": "Top"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "English Premier League"
+      }
+    ],
+    "then": {
+      "attribute": "Country",
+      "value": "England"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "LaLiga Santander"
+      }
+    ],
+    "then": {
+      "attribute": "Country",
+      "value": "Spain"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "Spain"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "White"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Real Madrid"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "Spain"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Blue / Garnet"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Barcelona"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "Spain"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red / White"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Athletico Madrid"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Country",
+        "value": "Spain"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red / White"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Athletic Bilbao"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Country",
+        "value": "Spain"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "White"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Valencia"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Manchester United"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Blue"
+      },
+      {
+        "attribute": "City",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Manchester City"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Blue"
+      },
+      {
+        "attribute": "City",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Chelsea"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red"
+      },
+      {
+        "attribute": "City",
+        "value": "London"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Arsenal"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red"
+      },
+      {
+        "attribute": "City",
+        "value": "Liverpool"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Liverpool"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "White / Black"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Fulham"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red / White"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "Southampton"
+    }
+  }
+]
