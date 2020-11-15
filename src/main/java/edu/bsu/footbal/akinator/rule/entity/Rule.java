@@ -1,6 +1,8 @@
 package edu.bsu.footbal.akinator.rule.entity;
 
-import java.util.List;
+import java.util.Iterator;
+import java.util.Objects;
+import java.util.Set;
 import java.util.StringJoiner;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -8,26 +10,42 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class Rule {
-    private final List<RuleEntity> ifRules;
+    private final Set<RuleEntity> ifRules;
     private final RuleEntity then;
 
     @Override
     public String toString() {
         StringJoiner ruleJoiner = new StringJoiner("", "<html><font color=red>If</font> ", ";");
-        RuleEntity firstIfRuleEntity = ifRules.get(0);
+        Iterator<RuleEntity> iterator = ifRules.iterator();
+        RuleEntity firstIfRuleEntity = iterator.next();
         ruleJoiner.add(firstIfRuleEntity.getAttribute())
                 .add(" <html><font color=red>=</font> ")
                 .add(firstIfRuleEntity.getValue());
-        for (int i = 1; i < ifRules.size(); i++) {
+        while (iterator.hasNext()) {
+            RuleEntity next = iterator.next();
             ruleJoiner.add(" <html><font color=red>and</font> ")
-                    .add(ifRules.get(i).getAttribute())
+                    .add(next.getAttribute())
                     .add(" <html><font color=red>=</font> ")
-                    .add(ifRules.get(i).getValue());
+                    .add(next.getValue());
         }
         ruleJoiner.add(" <html><font color=red>then</font> ")
                 .add(then.getAttribute())
                 .add(" <html><font color=red>=</font> ")
                 .add(then.getValue());
         return ruleJoiner.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rule rule = (Rule) o;
+        return Objects.equals(ifRules, rule.ifRules) &&
+                Objects.equals(then, rule.then);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ifRules, then);
     }
 }

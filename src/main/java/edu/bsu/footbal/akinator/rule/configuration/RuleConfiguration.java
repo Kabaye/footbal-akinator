@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
 import java.util.Collections;
-import java.util.List;
+import java.util.Set;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,8 +25,8 @@ public class RuleConfiguration {
     @SuppressWarnings("all")
     public RulesStore rulesStore() {
         URL resource = Thread.currentThread().getContextClassLoader().getResource("rules.json");
-        List<Rule> rules = new Gson().fromJson(new FileReader(new File(resource.toURI())), new TypeToken<List<Rule>>() {
+        Set<Rule> rules = new Gson().fromJson(new FileReader(new File(resource.toURI())), new TypeToken<Set<Rule>>() {
         }.getType());
-        return new RulesStore(Collections.unmodifiableList(rules));
+        return new RulesStore(Collections.unmodifiableSet(rules));
     }
 }

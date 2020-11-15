@@ -1,5 +1,6 @@
 package edu.bsu.footbal.akinator.app.processor;
 
+import edu.bsu.footbal.akinator.app.processor.controller.GameProcessController;
 import edu.bsu.footbal.akinator.app.shutdown.ShutdownManager;
 import edu.bsu.footbal.akinator.app.view.ViewController;
 import edu.bsu.footbal.akinator.rule.store.RulesStore;
@@ -19,6 +20,7 @@ public class AppProcessor {
     private final ViewController viewController;
     private final RulesStore rulesStore;
     private final ShutdownManager shutdownManager;
+    private final GameProcessController gameProcessController;
 
     private final FunctionsMap<Integer, Runnable> mainMenuFunctions = new FunctionsMap<>();
 
@@ -26,26 +28,32 @@ public class AppProcessor {
     public void startProcess() {
         mainMenuFunctions.put(0, this::showRules)
                 .put(1, this::startGame)
-                .put(2, this::exit);
+                .put(2, this::shutdown)
+                .put(-1, this::shutdown);
         loopGame();
     }
 
     private void loopGame() {
         while (true) {
             int i = viewController.showMainMenu();
-            mainMenuFunctions.get(i).run();
+            try {
+                mainMenuFunctions.get(i).run();
+            } catch (Exception e) {
+                viewController.showErrorMessage(e.getMessage());
+            }
         }
     }
 
     public void startGame() {
-
+        String clubName = gameProcessController.startNewGame();
+        viewController.showResult(clubName);
     }
 
     public void showRules() {
         viewController.showAllRules();
     }
 
-    public void exit() {
+    public void shutdown() {
         shutdownManager.initializeShutdown(0);
     }
 }

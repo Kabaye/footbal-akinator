@@ -8,4 +8,9 @@ import lombok.experimental.Accessors;
 public class RuleEntity {
     private final String attribute;
     private final String value;
+
+    @Override
+    public String toString() {
+        return attribute + " = " + value;
+    }
 }

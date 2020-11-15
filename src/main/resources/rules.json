@@ -31,6 +31,22 @@
     "ifRules": [
       {
         "attribute": "Tournament",
+        "value": "English Premier League"
+      },
+      {
+        "attribute": "Number of cups",
+        "value": "1-"
+      }
+    ],
+    "then": {
+      "attribute": "Status",
+      "value": "Not top"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
         "value": "LaLiga Santander"
       },
       {
@@ -41,6 +57,22 @@
     "then": {
       "attribute": "Status",
       "value": "Top"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Tournament",
+        "value": "LaLiga Santander"
+      },
+      {
+        "attribute": "Number of cups",
+        "value": "9-"
+      }
+    ],
+    "then": {
+      "attribute": "Status",
+      "value": "Not top"
     }
   },
   {
@@ -80,6 +112,10 @@
       {
         "attribute": "Form colour",
         "value": "White"
+      },
+      {
+        "attribute": "City",
+        "value": "Madrid"
       }
     ],
     "then": {
@@ -100,6 +136,10 @@
       {
         "attribute": "Form colour",
         "value": "Blue / Garnet"
+      },
+      {
+        "attribute": "City",
+        "value": "Barcelona"
       }
     ],
     "then": {
@@ -120,6 +160,10 @@
       {
         "attribute": "Form colour",
         "value": "Red / White"
+      },
+      {
+        "attribute": "City",
+        "value": "Madrid"
       }
     ],
     "then": {
@@ -130,12 +174,20 @@
   {
     "ifRules": [
       {
+        "attribute": "Status",
+        "value": "Not top"
+      },
+      {
         "attribute": "Country",
         "value": "Spain"
       },
       {
         "attribute": "Form colour",
         "value": "Red / White"
+      },
+      {
+        "attribute": "City",
+        "value": "Bilbao"
       }
     ],
     "then": {
@@ -146,12 +198,20 @@
   {
     "ifRules": [
       {
+        "attribute": "Status",
+        "value": "Not top"
+      },
+      {
         "attribute": "Country",
         "value": "Spain"
       },
       {
         "attribute": "Form colour",
         "value": "White"
+      },
+      {
+        "attribute": "City",
+        "value": "Valencia"
       }
     ],
     "then": {
@@ -172,6 +232,10 @@
       {
         "attribute": "Form colour",
         "value": "Red"
+      },
+      {
+        "attribute": "City",
+        "value": "Manchester"
       }
     ],
     "then": {
@@ -278,12 +342,20 @@
   {
     "ifRules": [
       {
+        "attribute": "Status",
+        "value": "Not top"
+      },
+      {
         "attribute": "Country",
         "value": "England"
       },
       {
         "attribute": "Form colour",
         "value": "White / Black"
+      },
+      {
+        "attribute": "City",
+        "value": "Fulham"
       }
     ],
     "then": {
@@ -294,17 +366,49 @@
   {
     "ifRules": [
       {
+        "attribute": "Status",
+        "value": "Not top"
+      },
+      {
         "attribute": "Country",
         "value": "England"
       },
       {
         "attribute": "Form colour",
         "value": "Red / White"
+      },
+      {
+        "attribute": "City",
+        "value": "Southampton"
       }
     ],
     "then": {
       "attribute": "Club",
       "value": "Southampton"
+    }
+  },
+  {
+    "ifRules": [
+      {
+        "attribute": "Status",
+        "value": "Not top"
+      },
+      {
+        "attribute": "Country",
+        "value": "England"
+      },
+      {
+        "attribute": "Form colour",
+        "value": "Red"
+      },
+      {
+        "attribute": "City",
+        "value": "Manchester"
+      }
+    ],
+    "then": {
+      "attribute": "Club",
+      "value": "United of Manchester"
     }
   }
 ]
